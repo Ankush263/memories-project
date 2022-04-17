@@ -7,6 +7,8 @@ const Posts = () => {
   const post = useSelector((state) => state.posts)
   const classes = useStyle()
 
+  //console.log(posts)
+
   return (
     <>
       <h1>Posts</h1>

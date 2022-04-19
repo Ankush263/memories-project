@@ -11,6 +11,7 @@ const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({
     creator: '', title: '', message: '', tags: '', selectedFile: ''
   })
+  
   const classes = useStyle()
   const dispatch = useDispatch()
 

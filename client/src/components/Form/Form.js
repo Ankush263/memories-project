@@ -8,9 +8,7 @@ import useStyle from './styles'
 import { createPost, updatePost } from "../../actions/posts"
 
 const Form = ({ currentId, setCurrentId }) => {
-  const [postData, setPostData] = useState({
-    creator: '', title: '', message: '', tags: '', selectedFile: ''
-  })
+  const [postData, setPostData] = useState({creator: '', title: '', message: '', tags: '', selectedFile: ''})
   const post = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null)
 
   const classes = useStyle()
@@ -28,10 +26,12 @@ const Form = ({ currentId, setCurrentId }) => {
     } else {
       dispatch(createPost(postData))
     }
+    clear()
   }
 
   const clear = () => {
-
+    setCurrentId(null)
+    setPostData({creator: '', title: '', message: '', tags: '', selectedFile: ''})
   }
   return (
     <Paper className={classes.paper}>

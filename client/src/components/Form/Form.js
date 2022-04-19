@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux"
 
 import useStyle from './styles'
 
-import { createPost } from "../../actions/posts"
+import { createPost, updatePost } from "../../actions/posts"
 
 const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({
@@ -17,7 +17,11 @@ const Form = ({ currentId, setCurrentId }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    dispatch(createPost(postData))
+    if(currentId) {
+      dispatch(updatePost(currentId, postData))
+    } else {
+      dispatch(createPost(postData))
+    }
   }
 
   const clear = () => {

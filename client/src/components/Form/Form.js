@@ -40,7 +40,7 @@ const Form = ({ currentId, setCurrentId }) => {
         <TextField name="creator" varient="outliner" label="Creator" fullWidth value={postData.creator}onChange={(e) => setPostData({ ...postData, creator: e.target.value })}/>
         <TextField name="title" varient="outliner" label="Title" fullWidth value={postData.title}onChange={(e) => setPostData({ ...postData, title: e.target.value })}/>
         <TextField name="message" varient="outliner" label="Message" fullWidth value={postData.message}onChange={(e) => setPostData({ ...postData, message: e.target.value })}/>
-        <TextField name="tags" varient="outliner" label="Tags" fullWidth value={postData.tags}onChange={(e) => setPostData({ ...postData, tags: e.target.value })}/>
+        <TextField name="tags" varient="outliner" label="Tags" fullWidth value={postData.tags}onChange={(e) => setPostData({ ...postData, tags: e.target.value.split(',') })}/>
         <div className={classes.fileInput}>
           <FileBase type="file" multiple={false} onDone={(base64) => setPostData({ ...postData, selectedFile: base64 })}/>
         </div>

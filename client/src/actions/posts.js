@@ -11,10 +11,11 @@ export const getPosts = () => async (dispatch) => {
     console.log(error)
   }
 
-  const action = { type: 'FETCH_ALL', payload: [] }
+  // const action = { type: 'FETCH_ALL', payload: [] }
 
-  dispatch(action)
+  // dispatch(action)
 }
+
 
 export const createPost = (post) => async (dispatch) => {
   try {

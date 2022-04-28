@@ -28,7 +28,9 @@ const Auth = () => {
             {
               isSignup && (
                 <>
+                <Grid xs={6} md={12}>
                   <TextField name='firstName' label='First Name' handleChange={handleChange} autoFocus xs={6} />
+                </Grid>
                   <TextField name='lastName' label='First Name' handleChange={handleChange} autoFocus xs={6} />
                 </>
               )

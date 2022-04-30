@@ -8,17 +8,20 @@ import useStyles from './styles'
 import Input from './Input'
 import Icon from './Icon'
 
+const initialState = { firstName: '', lastName: '', email:'', password:'', confirmPassword: '' }
+
 const Auth = () => {
   const classes = useStyles()
   const [showPassword, setShowPassword] = useState(false)
   const [isSignup, setIsSignup] = useState(false)
+  const [formData, setFormData] = useState(initialState)
   const dispatch = useDispatch()
   const history = useHistory()
 
   const handleShowPassword = () => setShowPassword((prevState) => !prevState)
 
   const handleSubmit = () => {
-
+    console.log(formData)
   }
 
   const handleChange = () => {
@@ -61,7 +64,7 @@ const Auth = () => {
               isSignup && (
                 <>
                   <Input name='firstName' label='First Name' handleChange={handleChange} autoFocus half />
-                  <Input name='lastName' label='First Name' handleChange={handleChange}  half />
+                  <Input name='lastName' label='Last Name' handleChange={handleChange}  half />
                 </>
               )
             }

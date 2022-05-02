@@ -27,7 +27,7 @@ const Home = () => {
         </Grid>
       </Container>
     </Grow>
-  );
-};
+  )
+}
 
 export default Home

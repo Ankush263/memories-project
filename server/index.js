@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 import postRoutes from './routes/posts.js';
-import userRouter from "./routes/user.js";
+import userRouter from "./routes/users.js";
 
 const app = express();
 

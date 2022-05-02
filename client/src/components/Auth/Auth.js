@@ -79,7 +79,7 @@ const SignUp = () => {
             { isSignup ? 'Sign Up' : 'Sign In' }
           </Button>
           <GoogleLogin
-             clientId="25152380637-34q5r2o5kt5lqtpecrlevi9cfrrfgkrn.apps.googleusercontent.com"
+            clientId="25152380637-34q5r2o5kt5lqtpecrlevi9cfrrfgkrn.apps.googleusercontent.com"
             render={(renderProps) => (
               <Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon />} variant="contained">
                 Google Sign In
@@ -89,7 +89,7 @@ const SignUp = () => {
             onFailure={googleError}
             cookiePolicy="single_host_origin"
           />
-          <Grid container justify="flex-end">
+          <Grid container justify="center">
             <Grid item>
               <Button onClick={switchMode}>
                 { isSignup ? 'Already have an account? Sign in' : "Don't have an account? Sign Up" }

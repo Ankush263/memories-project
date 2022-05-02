@@ -17,7 +17,7 @@ app.use('/posts', postRoutes)
 app.use('/user', userRoutes)
 
 app.get('/', (req, res) => {
-  res.send("Hello Ankush Banik");
+  res.send("Hello Ankush Banik123")
 })
 
 const CONNECTION_URL = process.env.CONNECTION_URL

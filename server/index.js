@@ -20,10 +20,10 @@ app.get('/', (req, res) => {
   res.send("Hello Ankush Banik123")
 })
 
-const CONNECTION_URL = "mongodb+srv://Ankush263:Ankush263@cluster0.3c3fb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const URL = "mongodb+srv://Ankush263:Ankush263@cluster0.3c3fb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const port = process.env.PORT || 5000
 
-mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(port, () => console.log(`Server Running on Port: http://localhost:${port}`)))
   .catch((error) => console.log(`${error} did not connect`))
 

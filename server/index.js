@@ -21,10 +21,10 @@ app.get('/', (req, res) => {
 })
 
 const CONNECTION_URL = "mongodb+srv://Ankush263:Ankush263@cluster0.3c3fb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-const PORT = process.env.PORT || 5000
+const port = process.env.PORT || 5000
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
+  .then(() => app.listen(port, () => console.log(`Server Running on Port: http://localhost:${port}`)))
   .catch((error) => console.log(`${error} did not connect`))
 
 mongoose.set('useFindAndModify', false)

@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   res.send("Hello Ankush");
 })
 
-//const CONNECTION_URL = process.env.CONNECTION_URL
+const CONNECTION_URL = process.env.CONNECTION_URL
 const PORT = process.env.PORT|| 5000
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })

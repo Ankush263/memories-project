@@ -16,4 +16,3 @@ export default (posts = [], action) => {
       return posts;
   }
 };
-

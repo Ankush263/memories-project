@@ -4,7 +4,7 @@ import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui
 import { useHistory } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-
+import dotenv from 'dotenv'
 import Icon from './icon';
 import { signin, signup } from '../../actions/auth';
 import { AUTH } from '../../constants/actionTypes';
@@ -12,7 +12,7 @@ import useStyles from './styles';
 import Input from './Input';
 
 const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
-
+dotenv.config()
 const SignUp = () => {
   const [form, setForm] = useState(initialState);
   const [isSignup, setIsSignup] = useState(false);
@@ -79,7 +79,7 @@ const SignUp = () => {
             { isSignup ? 'Sign Up' : 'Sign In' }
           </Button>
           <GoogleLogin
-            clientId="25152380637-34q5r2o5kt5lqtpecrlevi9cfrrfgkrn.apps.googleusercontent.com"
+             clientId="25152380637-34q5r2o5kt5lqtpecrlevi9cfrrfgkrn.apps.googleusercontent.com"
             render={(renderProps) => (
               <Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon />} variant="contained">
                 Google Sign In

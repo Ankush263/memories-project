@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000' });
+const API = axios.create({ baseURL: 'https://memories-project-263.herokuapp.com/posts' });
+//const url = 'https://memories-project-263.herokuapp.com/posts'
+
+//http://localhost:5000
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('profile')) {
@@ -23,5 +26,3 @@ export const signUp = (formData) => API.post('/user/signup', formData);
 
 
 
-
-//const url = 'https://memories-project-263.herokuapp.com/posts'

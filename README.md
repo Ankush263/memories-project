@@ -13,6 +13,9 @@
   </tr>
 </table>
 <h1>🚀 Languages and Tools:</h1>
+<br/>
+<br/>
+<div>
 <p align='center'>
   <a href="https://www.mongodb.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"      alt="mongodb" width="96" height="96"/> </a>
   <a href="https://expressjs.com/" target="_blank"> <img src="https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png"  width="96" height="96"/> </a>
@@ -25,9 +28,13 @@
   
  
 </p>
-
+</div>
+<br/>
+<br/>
+<br/>
 <img src="https://user-images.githubusercontent.com/86042508/167813631-d04cc39b-3007-4c59-bce0-485572611f52.gif" alt=gif align="center"> 
-
+<br/>
+<br/>
 <div>
   <h1>🚀Descripton:</h1>
   <h3>In this site you can add your sweet memories, also you can add your travel memories with image of places</h3>
